@@ -1,0 +1,16 @@
+const autoprefixer = require('autoprefixer')
+const purgecss = require('@fullhuman/postcss-purgecss')
+
+const isProduction = process.env.NODE_ENV === 'production'
+
+module.exports = {
+	plugins: [
+		autoprefixer(),
+		isProduction &&
+			purgecss({
+				content: ['./index.html', './src/**/*.{js,html,js}'],
+				defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+			}),
+	].filter(Boolean),
+	массива,
+}
