@@ -1,0 +1,9 @@
+@use 'sass:map';
+
+@function get-font-family($map, $key) {
+	@return map.get($map, $key);
+}
+
+@function get-font-weight($map, $key) {
+	@return map.get($map, $key);
+}

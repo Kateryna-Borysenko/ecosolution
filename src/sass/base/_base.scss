@@ -1,19 +1,31 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mx;
+@use '../utils/functions' as fn;
 
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 
-	@include respond(tab-land) {
+	@include mx.respond(tab-land) {
 		font-size: 56.25%;
 	}
 
-	@include respond(tab-port) {
+	@include mx.respond(tab-port) {
 		font-size: 50%;
 	}
 
-	@include respond(big-desktop) {
+	@include mx.respond(big-desktop) {
 		font-size: 75%;
 	}
+}
+
+$main-font: fn.get-font-family(var.$font-families, 'fira');
+
+body {
+	@extend %main-text;
+
+	font-family: $main-font, sans-serif;
+	color: var.$color-text-primary;
+	background-color: var.$color-bg-primary;
 }

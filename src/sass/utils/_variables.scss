@@ -3,7 +3,7 @@ $color-text-primary: #173d33; // основной текст, заголовки
 $color-text-secondary: #828282; // подписи, вторичный текст
 $color-text-contrast: #ffffff;
 
-$color-bg-primary: #f3f6f9; // основной фон секций
+$color-bg-primary: #f3f5fa; // основной фон секций
 $color-bg-secondary: #e4efe7; // фон формы / футера
 $color-surface: #ffffff; // карточки, блоки
 
@@ -15,3 +15,14 @@ $color-overlay: rgba(36, 76, 62, 0.95); // моб. меню / модалки
 
 $color-control-bg: $color-brand; // фон элементов управления
 $color-control-icon: $color-text-primary; // иконки/линии в контролах
+
+$font-weights: (
+	'Regular': 400,
+	'Medium': 500,
+	'Bold': 700,
+);
+
+$font-families: (
+	'oswald': 'Oswald',
+	'fira': 'FiraSans',
+);
