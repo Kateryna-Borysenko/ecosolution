@@ -1,4 +1,13 @@
+// @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
 .header {
-	padding: 3.6rem 2rem;
 	outline: 1px solid red;
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@include respond(tab-land) {
+		grid-template-columns: auto 1fr;
+		align-items: center;
+	}
 }

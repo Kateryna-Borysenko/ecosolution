@@ -11,16 +11,12 @@
 		height: 3.9rem;
 		width: 3.9rem;
 		position: fixed;
-		top: 3.6rem;
+		top: 2.7rem;
 		right: 2rem;
 		border-radius: 50%;
 		z-index: 2000;
 		text-align: center;
 		cursor: pointer;
-
-		// @include respond(tab-port) {
-
-		// }
 	}
 
 	&__background {
@@ -29,7 +25,7 @@
 		height: 3.9rem;
 		width: 3.9rem;
 		position: fixed;
-		top: 3.6rem;
+		top: 2.7rem;
 		right: 2rem;
 		border-radius: 50%;
 		z-index: 1000;
@@ -38,14 +34,13 @@
 
 	&__nav {
 		border-top: 1px solid white;
-		margin-top: 12.5rem;
+		margin-top: 9.5rem;
 		padding-top: 2rem;
 		height: 100vh;
 		position: fixed;
 		top: 0;
 		left: 0;
 		z-index: 1500;
-
 		opacity: 0;
 		width: 0;
 		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -62,7 +57,7 @@
 		&:link,
 		&:visited {
 			display: inline-block;
-			font-size: 2.4rem;
+			font-size: 1.8rem;
 			font-weight: 300;
 			padding: 0.4rem 2rem; //расширили для удобства пользователя
 			text-decoration: none;
@@ -150,5 +145,38 @@
 
 	&__checkbox:checked + &__button:hover &__icon::after {
 		background-color: $color-brand-hover;
+	}
+
+	@include respond(tab-land) {
+		&__checkbox,
+		&__button,
+		&__background {
+			display: none;
+		}
+
+		&__nav {
+			all: unset; // сброс mobile-стилей, он как reset только для одного элемента
+			display: contents; // «растворяем» nav, пробрасываем .navigation__list в header
+		}
+
+		&__list {
+			max-width: 60rem;
+			color: $color-text-primary;
+			display: grid;
+			grid-auto-flow: column;
+			justify-content: space-between;
+			justify-self: end;
+		}
+
+		&__link {
+			&:link,
+			&:visited {
+				padding: 0;
+			}
+
+			&:hover {
+				color: $color-brand-hover;
+			}
+		}
 	}
 }

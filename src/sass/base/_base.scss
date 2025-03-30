@@ -7,17 +7,17 @@ html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 
-	@include mx.respond(tab-land) {
-		font-size: 56.25%;
-	}
+	// @include mx.respond(tab-land) {
+	// 	font-size: 56.25%;
+	// }
 
-	@include mx.respond(tab-port) {
-		font-size: 50%;
-	}
+	// @include mx.respond(tab-port) {
+	// 	font-size: 50%;
+	// }
 
-	@include mx.respond(big-desktop) {
-		font-size: 75%;
-	}
+	// @include mx.respond(big-desktop) {
+	// 	font-size: 75%;
+	// }
 }
 
 $main-font: fn.get-font-family(var.$font-families, 'fira');

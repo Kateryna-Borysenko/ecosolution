@@ -1,0 +1,8 @@
+@use '../utils/mixins' as *;
+
+.logo {
+	&__img {
+		height: 2.8rem;
+		width: auto;
+	}
+}
