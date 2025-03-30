@@ -1,1 +1,5 @@
-
+.container {
+	display: grid;
+	gap: 10rem;
+	grid-template-areas: 'header';
+}
